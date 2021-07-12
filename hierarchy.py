@@ -67,10 +67,12 @@ class Student(Person):
     def sayCareer(self):
         print(f'''I'm {self.name}, and I study {self.__career}  ''')
 
+    def salute(self, other):
+        print(f'Hey {other.name}, my name is {self.name} and I am a student!')
+
 
 derick = Student('Derick', 19, 'IT')
-patrick = Student('Patrick', 23, 'Law')
+patrick = Person('Patrick', 23)
 
 derick.salute(patrick)
-derick.sayCareer()
-patrick.sayCareer()
+patrick.salute(derick)
